@@ -1,0 +1,255 @@
+
+/*
+Colors used
+
+Text Color (Dark Gray): #2b2b2b;
+Primary Color (Purple): #357b70;
+Secondary Color (Orange): #e0b354;
+ */
+ :root {
+   --primary-color: #357b70;
+   --secondary-color: #e0b354;
+   --dark-grey: #2b2b2b;
+ }
+ a {
+  color: var(--primary-color);
+}
+  body {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  /* Sets the font size to 16px */
+  line-height: 1.6;
+  /* Sets the line-height to 1.6 */
+  background-color: black;
+}
+.navigation-list {
+  list-style-type: none;
+  margin-right: 20px;
+}
+.navigation-list li {
+  display: inline-block;
+  margin-left: 15px;
+  color: #FEECE9;
+  font-size: 18px;
+  padding-top: 20px;
+}
+.navigation-list__item--active {
+  text-decoration: none;
+}
+
+h1 {
+  font-size: 25px;
+  font-weight: 700;
+  text-decoration: underline;
+  color: #98d161;
+}
+
+h2 {
+  font-size: 24px;
+  font-weight: 700;
+  color: #98d161;
+}
+p {color: #98d161;}
+
+h3 {
+  font-size: 18px;
+  font-weight: 700;
+}
+li a {
+  display: block;
+  text-align: center;
+  padding: 16px;
+  text-decoration: none;
+}
+li a:hover {
+  background-color: #357C3C;
+}
+a {
+  color: #98d161;
+}
+
+a:visited {
+  /* visited link */
+  color: #eae5d9;
+}
+a:hover, a:focus {
+  /* No underlining when hovering over a link */
+  text-decoration: none;
+}
+
+a:active {
+  /* selected link */
+  color: #489c79;
+}
+
+a {/* element selector */
+  color: gray;
+}
+
+#my-link {/* id selector */
+  color: green;
+}
+
+.my-link {/* class selector */
+  color: blue;
+}
+.standard-label {
+  line-height: 2.6;
+}
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+.profile__portrait {
+  float: right;
+  width: 250px;
+  margin-right: 50px;
+  border-radius: 50%;
+}
+.profile {
+  max-width: 700px;
+  margin: 0 auto;
+  padding-bottom: 250px;
+}
+.profile.text {
+  flex: 1 1 100px;
+}
+.page-header {
+  display: flex;
+  width: 100%;
+  background-color: #2C2B30;
+}
+.page-header__item:last-child {
+  flex-grow: 1;
+  text-align: right;
+}
+.about-section {
+  padding-bottom: 100px;
+  text-align: center;
+}
+.table-section {padding: 20px 0;
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 50%;
+  margin-left: 400px;
+  margin-right: auto;
+}
+
+td, th {
+  border: 1px solid black;
+  border-radius: 10px;
+  text-align: left;
+  padding: 8px;
+}
+.page-footer {
+  clear: both;
+  display: flex;
+  flex-direction: column-reverse;
+  text-align: center;
+  background-color: #2C2B30;
+  color: white;
+  padding: 0;
+  text-align: center;
+}
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 20px;
+  background-color: #393E46;
+}
+.grid__item {
+  background-color: #222831;
+  padding: 30px 30px;
+}
+@media all and (max-width: 500px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
+@media all and (min-width: 500px) and (max-width: 750px){
+  .grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media all and (max-width: 750px) {
+  .grid {
+    grid-gap: 10px;
+  }
+  .grid__item:last-child {
+    grid-column: auto / auto;
+    grid-row: auto / auto;
+  }
+}
+.button, button {
+  /* overwrites browser defaults and resets the border */
+  border: none;
+  display: inline-block;
+  /* takes the font from the outer container */
+  font-family: inherit;
+  /* styles the button */
+  background-color: #357b70;
+  color: white;
+  text-decoration: none;
+  padding: 10px;
+  border-radius: 10px;
+  /* width of the border, type, color */
+  border-bottom: 2px solid rgba(0, 0, 0, 0.3);
+  transition-duration: 0.2s;
+  transition-property: opacity;
+}
+
+button:hover,
+button:focus,
+.button:hover,
+.button:focus {
+  /* lets the mouse appear as a hand when hovering over the button */
+  cursor: pointer;
+  /* reduces the opacity of the button to 80% */
+  opacity: 0.8;
+}
+@keyframes color-change {
+  0% {
+    fill: #edc655;
+  }
+  50% {
+    fill: #fcffad;
+  }
+  100% {
+    fill: #f76414;
+  }
+}
+.sun {
+  animation: 4s color-change infinite alternate linear;
+}
+@keyframes cloud-move {
+  from {
+    transform: translate(0, 50px);
+  }
+  to {
+    transform: translate(200px, 50px);
+  }
+}
+.cloud-front {
+  animation-duration: 30s;
+  animation-name: cloud-move;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: linear;
+}
+@keyframes cloud-move-reverse {
+  from {
+    transform: translate(446px, 48px);
+  }
+  to {
+    transform: translate(100px, 48px);
+  }
+}
+.cloud-back {
+  animation: 34s cloud-move-reverse infinite alternate linear;
+}
+.berlin-illustration {display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 40%;}
