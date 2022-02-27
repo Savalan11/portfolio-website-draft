@@ -1,0 +1,38 @@
+.box__wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 20px;
+  padding: 20px;
+  font-family: sans-serif;
+}
+
+.box-primary {
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: none;
+  background-color: #112055;
+  color: white;
+}
+
+.box-primary-lighter {
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: none;
+  background-color: #2240aa;
+}
+
+.box-primary-darker {
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: none;
+  background-color: black;
+  color: white;
+}
+
+.box-secondary {
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: none;
+  background-color: #4f9d92;
+  color: #000;
+}
